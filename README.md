@@ -102,6 +102,14 @@ _(accessible via BrowserStack account)_
 
 ---
 
-📌 **Проект создан в учебных и демонстрационных целях для портфолио.**
+## 📜 Лицензия
 
-## ⭐ QA Engineer: Alisher
+MIT — see [LICENSE](./LICENSE)
+
+---
+
+## ⭐ Автор
+
+Alisher — SDET / Automation Engineer
+Web · Mobile · AI-driven Testing
+https://github.com/alisher-sdet
