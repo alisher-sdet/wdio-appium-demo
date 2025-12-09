@@ -1,8 +1,12 @@
-# 📱 Mobile UI Testing Automation Demo
+# WDIO + Appium Mobile Automation
 
-_(WebdriverIO + Appium + BrowserStack + GitHub Actions)_
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+![WebdriverIO](https://img.shields.io/badge/WebdriverIO-v8-EE0000?logo=webdriverio)
+![Appium](https://img.shields.io/badge/Appium-2.x-8652F6?logo=appium)
+![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=node.js)
+![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20BrowserStack-orange)
 
-[![WebdriverIO Tests](https://github.com/ja777mail/ui_m_wd/actions/workflows/ci_webdriver.yml/badge.svg)](https://github.com/ja777mail/ui_m_wd/actions/workflows/ci_webdriver.yml)
+Учебный, но инженерно оформленный мобильный фреймворк на **WebdriverIO + Appium** для Android-тестирования (локально и в BrowserStack). Проект демонстрирует кроссплатформенную архитектуру и подход уровня Senior / SDET.
 
 ---
 
