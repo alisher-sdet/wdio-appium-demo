@@ -2,9 +2,9 @@
 
 [![CI](https://github.com/alisher-sdet/wdio-appium-demo/actions/workflows/ci_webdriver.yml/badge.svg)](https://github.com/alisher-sdet/wdio-appium-demo/actions/workflows/ci_webdriver.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-![WebdriverIO](https://img.shields.io/badge/WebdriverIO-v8-EE0000?logo=webdriverio)
+![WebdriverIO](https://img.shields.io/badge/WebdriverIO-v9-EE0000?logo=webdriverio)
 ![Appium](https://img.shields.io/badge/Appium-2.x-8652F6?logo=appium)
-![Node.js](https://img.shields.io/badge/Node.js-20-green?logo=node.js)
+![Node.js](https://img.shields.io/badge/Node.js-22-green?logo=node.js)
 
 > **Происхождение проекта.** Учебный проект. При работе использовался ИИ-ассистент.
 > **Что сделал я:** запуск и настройка WebdriverIO и Appium, запуск на реальных устройствах в BrowserStack, настройка и починка CI в GitHub Actions (зафиксирована версия Node, `npm ci`, документация не запускает тесты).
