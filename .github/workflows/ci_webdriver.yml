@@ -4,9 +4,10 @@ on:
     paths-ignore: ["**.md"]
   pull_request:
     paths-ignore: ["**.md"]
+  workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
