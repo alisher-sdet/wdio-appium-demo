@@ -9,7 +9,8 @@
     "@wdio/mocha-framework": "^9.20.0",
     "@wdio/spec-reporter": "^9.20.0",
     "appium": "^2.19.0",
-    "appium-uiautomator2-driver": "^6.0.2"
+    "appium-uiautomator2-driver": "^6.0.2",
+    "dotenv": "^18.0.10"
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js"

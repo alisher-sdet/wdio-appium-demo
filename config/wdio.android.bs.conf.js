@@ -25,11 +25,11 @@ baseConfig.capabilities = [
 		// capabilities for local Appium web tests on an Android Emulator
 		// https://www.browserstack.com/docs/app-automate/capabilities
 		platformName: "Android",
-		"appium:deviceName": "Google Pixel 9 Pro", // Android GoogleAPI Emulator
-		"appium:platformVersion": "15.0", // 12.0
+		"appium:deviceName": "Google Pixel 8 Pro", // Android GoogleAPI Emulator
+		"appium:platformVersion": "14.0", // 12.0
 		"appium:automationName": "UiAutomator2",
 		// "appium:app": path.join(process.cwd(), "app/android/ApiDemos-debug.apk"),
-		"appium:app": "bs://f0cf2db91b09f9c6d27279e69d72a926c48bcc65",
+		"appium:app": "bs://827376a103ea23f4e8221a5fcca03ef198bf0549",
 	},
 ];
 //

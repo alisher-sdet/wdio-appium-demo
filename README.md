@@ -1,115 +1,46 @@
-# WDIO + Appium Mobile Automation
+# WDIO + Appium Mobile Automation (Android)
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 ![WebdriverIO](https://img.shields.io/badge/WebdriverIO-v8-EE0000?logo=webdriverio)
 ![Appium](https://img.shields.io/badge/Appium-2.x-8652F6?logo=appium)
-![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=node.js)
-![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20BrowserStack-orange)
+![Node.js](https://img.shields.io/badge/Node.js-20-green?logo=node.js)
 
-Учебный, но инженерно оформленный мобильный фреймворк на **WebdriverIO + Appium** для Android-тестирования (локально и в BrowserStack). Проект демонстрирует кроссплатформенную архитектуру и подход уровня Senior/SDET.
+> **Происхождение проекта.** Учебный проект. [Выполнен по курсу «название» (Udemy, автор) / Создан с помощью ИИ-ассистента.]
+> **Что сделал я:** [настройка WebdriverIO и Appium, Screen Objects, запуск в BrowserStack, настройка CI, разбор падений ...].
+> **Чего здесь нет:** iOS, параллельного запуска, [негативных сценариев ...].
 
----
+## Описание
 
-## 🇷🇺 Описание
+UI-тесты Android-приложения на WebdriverIO + Appium с паттерном Screen Object. Запуск локально и на реальных устройствах в BrowserStack, автоматический запуск в GitHub Actions.
 
-Портфолио-проект тестировщика, демонстрирующий:
+- Тестируемое приложение: [название и версия APK], файл в `app/android`.
+- Сценариев: [N] (`test/specs/android`).
+- CI: [workflow `ci_webdriver.yml`](https://github.com/alisher-sdet/wdio-appium-demo/actions/workflows/ci_webdriver.yml). Последний запуск: [зелёный/красный и дата].
+- Отчёты (видео, логи устройств, скриншоты) в BrowserStack доступны только владельцу аккаунта. При запусках в Actions логи сохраняются как артефакт.
 
-- автоматизацию **мобильных UI-тестов** с помощью **WebdriverIO** и **Appium**
-- использование **BrowserStack** для запуска тестов на **реальных мобильных устройствах**
-- применение архитектуры **Page Object Model (Screen Objects)** для структурирования тестов
-- настройку **CI/CD-интеграции** через **GitHub Actions**
-- выполнение **end-to-end сценариев** в облачном тестовом окружении
-- навыки проектирования, написания и анализа UI-тестов
+## Структура
 
-📂 Репозиторий показывает реальные сценарии выполнения тестов мобильного андроид-приложения при каждом `push`.  
-🔗 **Результаты последних запусков:**  
-👉 [Run WebdriverIO Tests — GitHub Actions](https://github.com/ja777mail/ui_m_wd/actions/workflows/ci_webdriver.yml)
+- `app/android` — APK приложения
+- `config` — конфигурации WebdriverIO (локально и BrowserStack)
+- `screens/android` — Screen Objects
+- `test/specs/android` — тесты
+- `.github/workflows/ci_webdriver.yml` — запуск в GitHub Actions
 
-📊 **Отчёты о прохождении тестов доступны в [BrowserStack](https://www.browserstack.com/app-automate)**  
-_(доступ к отчётам через учётную запись BrowserStack)_
+## Запуск
 
----
+```bash
+npm ci
+export BS_USER=<ваш пользователь BrowserStack>
+export BS_KEY=<ваш ключ BrowserStack>
+npx wdio config/wdio.android.bs.conf.js
+```
 
-## 🇬🇧 Description
+Для запуска на эмуляторе: [команда и конфигурация, например `npx wdio config/wdio.android.conf.js`, проверьте имя файла].
 
-Portfolio project demonstrating tester’s practical skills in:
+## Стек
 
-- **Mobile UI automation** using **WebdriverIO** + **Appium**
-- running tests on **real mobile devices** via **BrowserStack**
-- applying the **Page Object Model (Screen Objects)** design pattern for maintainable test structure
-- Continuous integration setup with **GitHub Actions**
-- executing **end-to-end test scenarios** in a cloud environment
-- analyzing and monitoring test runs in BrowserStack
+WebdriverIO v8, Appium 2.x, Node.js 20, BrowserStack App Automate, GitHub Actions.
 
-📂 Repository runs automated test suites for mobile apps on every commit.  
-🔗 **Latest test results:**  
-👉 [Run WebdriverIO Tests — GitHub Actions](https://github.com/ja777mail/ui_m_wd/actions/workflows/ci_webdriver.yml)
+## Лицензия
 
-📊 **Test execution reports are available in [BrowserStack](https://www.browserstack.com/app-automate)**  
-_(accessible via BrowserStack account)_
-
----
-
-## ⚙️ Tech Stack
-
-| Tool                     | Description                                       | Link                                                                   |
-| ------------------------ | ------------------------------------------------- | ---------------------------------------------------------------------- |
-| 🧭 **WebdriverIO**       | Framework for web and mobile UI automation        | [webdriver.io](https://webdriver.io/)                                  |
-| 📱 **Appium**            | Mobile automation framework for Android & iOS     | [appium.io](https://appium.io/)                                        |
-| ☁️ **BrowserStack**      | Cloud service for real device and browser testing | [browserstack.com](https://www.browserstack.com/app-automate)          |
-| ⚙️ **GitHub Actions**    | Continuous Integration (CI/CD) automation         | [docs.github.com/actions](https://docs.github.com/actions)             |
-| 💻 **Node.js**           | JavaScript runtime for WebdriverIO and automation | [nodejs.org](https://nodejs.org/)                                      |
-| 📄 **Page Object Model** | Design pattern for maintainable test architecture | [webdriver.io/docs/pageobjects](https://webdriver.io/docs/pageobjects) |
-
----
-
-## 🧰 Конфигурация окружения (Environment Setup)
-
-Тестовое окружение включает в себя:
-
-1. **BrowserStack App Automate**
-
-   - Выполняет тесты на реальных Android и iOS устройствах
-   - Поддерживает интеграцию с Appium и WebdriverIO
-   - Отчёты, видео, скриншоты и логи доступны в BrowserStack Dashboard
-
-2. **WebdriverIO Configuration**
-
-   - Конфигурационный файл `wdio.android.bs.conf.js` управляет запуском тестов
-   - Использует **Screen Objects** для организации логики экранов
-   - Настройки позволяют удобно переключаться между локальными и облачными тестами
-
-3. **CI/CD Integration**
-
-   - Каждый `push` активирует GitHub Actions workflow
-   - Workflow:
-     - устанавливает зависимости
-     - выполняет тесты WebdriverIO на BrowserStack
-     - сохраняет результаты и логи
-
----
-
-### 🧩 Автоматический запуск тестов
-
-Каждый новый `commit` или `push` инициирует выполнение **WebdriverIO + Appium** тестов  
-в **BrowserStack**, где результаты включают:
-
-- видео-трейсы прохождения сценариев
-- логи устройств
-- скриншоты шагов теста
-
-Результаты также отображаются в **GitHub Actions**.
-
----
-
-## 📜 Лицензия
-
-MIT — see [LICENSE](./LICENSE)
-
----
-
-## ⭐ Автор
-
-Alisher — SDET / Automation Engineer
-Web · Mobile · AI-driven Testing
-https://github.com/alisher-sdet
+MIT, см. [LICENSE](./LICENSE).

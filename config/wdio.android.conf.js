@@ -19,7 +19,7 @@ baseConfig.capabilities = [
 		// capabilities for local Appium web tests on an Android Emulator
 		platformName: "Android",
 		"appium:deviceName": "Pixel 9 Pro", // Android GoogleAPI Emulator
-		"appium:platformVersion": "16.0", // 12.0
+		"appium:platformVersion": "17.0", // 12.0
 		"appium:automationName": "UiAutomator2",
 		"appium:app": path.join(process.cwd(), "app/android/ApiDemos-debug.apk"),
 	},
