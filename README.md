@@ -6,7 +6,7 @@
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=node.js)
 ![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20BrowserStack-orange)
 
-Учебный, но инженерно оформленный мобильный фреймворк на **WebdriverIO + Appium** для Android-тестирования (локально и в BrowserStack). Проект демонстрирует кроссплатформенную архитектуру и подход уровня Senior / SDET.
+Учебный, но инженерно оформленный мобильный фреймворк на **WebdriverIO + Appium** для Android-тестирования (локально и в BrowserStack). Проект демонстрирует кроссплатформенную архитектуру и подход уровня Senior/SDET.
 
 ---
 
